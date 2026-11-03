@@ -39,11 +39,9 @@ function p2(r,bi,bo){
 }
 function render(){
  $("#dt").value=date;
- $("#cards").innerHTML=NUMS.map((n,i)=>{
-  const a=act[i];
-  return `<div class="card"><div class="ch"><b>${n}</b><span>Total ${CATS.reduce((s,k)=>s+ct(i,k[0]),0)}</span></div>
-<div class="tabs">${CATS.map(k=>`<button class="${k[0][0]} ${a==k[0]?"on":""}" data-t="${i}|${k[0]}">${k[1]}<i>${ct(i,k[0])}</i></button>`).join("")}</div>
-${OPTS.map(o=>`<div class="row"><span>${o[1]}</span><button data-a="${i}|${a}|${o[0]}|-1">−</button><b>${get(i,a,o[0])}</b><button class="pl" data-a="${i}|${a}|${o[0]}|1">+</button></div>`).join("")}</div>`}).join("");
+ $("#cards").innerHTML=NUMS.map((n,i)=>`<div class="card"><div class="ch"><b>${n}</b><span>Total ${CATS.reduce((s,k)=>s+ct(i,k[0]),0)}</span></div>
+<div class="g"><span></span>${CATS.map(k=>`<span class="h ${k[0][0]}">${k[1].replace("Internal","Int").replace("External","Ext")}</span>`).join("")}
+${OPTS.map(o=>`<span class="l">${o[0]}</span>${CATS.map(k=>`<div class="cell ${k[0][0]}"><button class="p" data-a="${i}|${k[0]}|${o[0]}|1">${get(i,k[0],o[0])}</button><button class="m" data-a="${i}|${k[0]}|${o[0]}|-1">−</button></div>`).join("")}`).join("")}</div></div>`).join("");
  const r=calc(),bi=r.in1!==r.in2,bo=r.out1!==r.out2,ck=$("#chk");
  ck.className=bi||bo?"bad":"ok";
  ck.innerHTML=bi||bo?"⚠ Totals do not match: "+(bi?`Incoming (Result 1 = ${r.in1}, Result 2 = ${r.in2}) `:"")+(bo?`Outgoing (Result 1 = ${r.out1}, Result 2 = ${r.out2})`:"")+" — marked in red below."
