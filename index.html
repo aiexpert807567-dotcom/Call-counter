@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Call Counter</title><link rel="stylesheet" href="style.css"></head><body>
+<section id="login"><form id="lf"><h1>📞 Call Counter</h1>
+<input id="em" type="email" placeholder="Email" required autocomplete="username">
+<input id="pw" type="password" placeholder="Password" required autocomplete="current-password">
+<button>Sign in</button><p id="err"></p></form></section>
+<main id="app" hidden>
+<header><h1>📞 Call Counter</h1><div class="hb"><input type="date" id="dt">
+<button id="rs" class="ghost">Reset day</button><button id="lo" class="ghost">Logout</button></div></header>
+<div id="chk"></div><div id="cards"></div>
+<h2>Result 1 · By number</h2><div class="pv" id="p1"></div><button class="cp" data-p="1">Copy table 1</button>
+<h2>Result 2 · By sector</h2><div class="pv" id="p2"></div><button class="cp" data-p="2">Copy table 2</button>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script></body></html>

@@ -1,0 +1,28 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,#e0f2fe,#fef3c7 55%,#fce7f3);min-height:100vh;color:#0f172a}
+[hidden]{display:none!important}
+#login{display:grid;place-items:center;min-height:100vh;padding:16px}
+#lf{background:#fff;padding:28px;border-radius:20px;box-shadow:0 12px 40px #0002;width:100%;max-width:360px;display:grid;gap:12px}
+#lf h1{margin:0;text-align:center}
+input{padding:12px;border:2px solid #cbd5e1;border-radius:12px;font-size:16px}
+button{cursor:pointer;border:0;border-radius:12px;font-size:16px;font-weight:700;padding:12px;background:#2563eb;color:#fff}
+#err{color:#dc2626;margin:0;text-align:center;font-size:14px}
+#app{max-width:1200px;margin:auto;padding:14px}
+header{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+header h1{margin:0;font-size:24px}.hb{display:flex;gap:8px;flex-wrap:wrap}
+.ghost{background:#fff;color:#334155;border:2px solid #cbd5e1}
+#chk{margin:12px 0;padding:12px 14px;border-radius:14px;font-weight:700}
+.ok{background:#dcfce7;color:#166534}.bad{background:#fee2e2;color:#991b1b;border:2px solid #dc2626}
+#cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.card{background:#fff;border-radius:18px;padding:14px;box-shadow:0 6px 22px #0001}
+.ch{display:flex;justify-content:space-between;font-size:18px;margin-bottom:10px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.tabs button{font-size:13px;padding:10px 6px;background:#f1f5f9;color:#334155;display:flex;justify-content:space-between;gap:6px}
+.tabs i{font-style:normal;background:#fff;border-radius:8px;padding:0 7px}
+.tabs .i.on{background:#6aa84f;color:#fff}.tabs .e.on{background:#ed7d31;color:#fff}
+.row{display:grid;grid-template-columns:1fr 52px 44px 52px;align-items:center;gap:6px;padding:5px 0;border-top:1px solid #e2e8f0}
+.row b{text-align:center;font-size:20px}.row button{padding:10px 0;font-size:22px;background:#e2e8f0;color:#0f172a}
+.row .pl{background:#16a34a;color:#fff}
+h2{margin:22px 0 8px}.pv{overflow-x:auto;background:#fff;padding:10px;border-radius:14px}
+.cp{margin-top:8px;background:#7c3aed}
+@media(max-width:480px){header h1{font-size:20px}.row{grid-template-columns:1fr 56px 40px 56px}}
